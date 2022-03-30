@@ -1,0 +1,126 @@
+.icon-btn {
+	font-size: 1.4em;
+	border: none;
+	background: none;
+}
+.contacts-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	background-color: #eead58;
+	position: relative;
+}
+.contacts-container > ul > li{
+	background-color: aliceblue;
+}
+.contact-details{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	/* position: absolute; */
+	background-color: white;
+	top:2em;
+	z-index: 1;
+}
+.contact-details > button {
+	margin: 1em;
+}
+.contact-details>h3{
+	display: inline-block;
+}
+.contact-details>header{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 100%;
+}
+.contact-details input{
+	padding: 0.3em;
+	font-size: 1em;
+}
+.adress-header{
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	width: 100vw;
+	justify-content: center;
+	align-items: center;
+	z-index: 0;
+}
+.adress-header>h1{
+	grid-column: 3/4;
+	text-align: center;
+}
+.adress-header>button{
+	grid-column: 5/6;
+	text-align: center;
+	width: 5em;
+	height: 3em;
+	justify-self: end;
+	margin:1em;
+}
+.contact-form{
+	position: absolute;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	border: 1px solid black;
+	background-color: white;
+	top: 1em;
+	padding: 1em;
+	justify-content: end;
+	text-align: end;
+	font-size: 1.3em;
+	box-shadow: 3px 3px 10px;
+	z-index: 1;
+}
+.contact-form input{
+	padding: 0.5em;
+	margin: 0.5em;
+	font-size: 1em;
+}
+.contact-form>h3,h4{
+	/* grid-column: 1/3; */
+	text-align: center;
+}
+.contact-form-buttons{
+	/* grid-column: 1/3; */
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 3em;
+}
+.contact-form-buttons>button{
+	background-color: white;
+	border: none;
+	font-size: 1.5em;
+}
+.contact-form-buttons>button:hover{
+	transform: scale(1.2);
+	cursor: pointer;
+}
+.contact-form-buttons>:first-child{
+	color: green;
+}
+.contact-form-buttons>:last-child{
+	color: red;
+}
+.contact-li{
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	padding: 1em;
+	border: 2px solid black;
+	border-radius: 1em;
+}
+.contact-li>button{
+	grid-column: 2/3;
+	justify-self: end;
+}
+.contact-li>div{
+	grid-column: 1/3;
+}
