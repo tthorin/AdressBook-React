@@ -17,6 +17,11 @@ function AdressBook(props) {
     });
     return highestId;
   }
+
+  const updateContact=(contact)=> {
+    setContacts(contacts.map((c) => (c.id === contact.id ? contact : c)));
+  }
+
   return (
     <section className="contacts-container">
 	<header className="adress-header">
@@ -25,7 +30,7 @@ function AdressBook(props) {
 	</header>
       <ul>
         {contacts.map((contact) => (
-          <Contact contact={contact} key={contact.id} setContacts={setContacts}/>
+          <Contact contact={contact} key={contact.id} update={updateContact}/>
         ))}
       </ul>
 	  {isAdding ? <ContactForm contacts={contacts} set={setContacts} setIsAdding={setIsAdding} contactId={idCounter} nextId={setIdCounter}/> : null}

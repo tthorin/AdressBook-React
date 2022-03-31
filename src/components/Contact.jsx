@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import ViewContact from "./ViewContact";
 import "./adressbook.css";
 
-const Contact = ({ set,contact, contact: { firstName, lastName, methods } }) => {
+const Contact = ({ update,contact, contact: { firstName, lastName, methods } }) => {
   const [viewingContact, setViewingContact] = useState(false);
 
   return (
@@ -21,7 +21,7 @@ const Contact = ({ set,contact, contact: { firstName, lastName, methods } }) => 
         )}
       </button>
       {viewingContact && (
-        <ViewContact contact={contact} viewing={setViewingContact} set={set}/>
+        <ViewContact contact={contact} update={update}/>
       )}
     </li>
   );
