@@ -6,7 +6,21 @@ import "./adressbook.css";
 function AdressBook(props) {
   const [contacts, setContacts] = useState(props.contacts);
   const[isAdding,setIsAdding] = useState(false);
-  const[idCounter,setIdCounter] = useState(props.contacts.length);
+  const[idCounter,setIdCounter] = useState(findHighestId(props.contacts));
+
+  function findHighestId(contacts) {
+    let highestId = 0;
+    contacts.forEach((contact) => {
+      if (contact.id > highestId) {
+        highestId = contact.id;
+      }
+    });
+    return highestId;
+  }
+
+  const updateContact=(contact)=> {
+    setContacts(contacts.map((c) => (c.id === contact.id ? contact : c)));
+  }
 
   return (
     <section className="contacts-container">
@@ -16,7 +30,7 @@ function AdressBook(props) {
 	</header>
       <ul>
         {contacts.map((contact) => (
-          <Contact contact={contact} key={contact.id} />
+          <Contact contact={contact} key={contact.id} update={updateContact}/>
         ))}
       </ul>
 	  {isAdding ? <ContactForm contacts={contacts} set={setContacts} setIsAdding={setIsAdding} contactId={idCounter} nextId={setIdCounter}/> : null}

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import ViewContact from "./ViewContact";
 import "./adressbook.css";
 
-const Contact = ({ contact, contact: { firstName, lastName, methods } }) => {
+const Contact = ({ update,contact, contact: { firstName, lastName, methods } }) => {
   const [viewingContact, setViewingContact] = useState(false);
 
   return (
@@ -20,9 +20,9 @@ const Contact = ({ contact, contact: { firstName, lastName, methods } }) => {
           <FontAwesomeIcon icon={faSearchPlus} />
         )}
       </button>
-      {viewingContact ? (
-        <ViewContact contact={contact} viewing={setViewingContact} />
-      ) : null}
+      {viewingContact && (
+        <ViewContact contact={contact} update={update}/>
+      )}
     </li>
   );
 };

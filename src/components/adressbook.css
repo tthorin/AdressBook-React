@@ -8,8 +8,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	width: 100vw;
-	height: 100vh;
+	/* height: 100vh; */
 	background-color: #eead58;
 	position: relative;
 }
@@ -37,7 +36,6 @@
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-evenly;
-	width: 100%;
 }
 .contact-details input{
 	padding: 0.3em;
@@ -46,7 +44,6 @@
 .adress-header{
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
-	width: 100vw;
 	justify-content: center;
 	align-items: center;
 	z-index: 0;
@@ -68,6 +65,7 @@
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
 	border: 1px solid black;
+	border-radius: 1em;
 	background-color: white;
 	top: 1em;
 	padding: 1em;

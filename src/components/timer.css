@@ -1,0 +1,26 @@
+.timer {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #767679;
+    border-radius: 0.5em;
+    width: 15em;
+    align-items: center;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+.timer>div>button{
+    margin: 0.5em;
+    padding: 0.3em;
+    font-size: 1em;
+}
+.timer>div>button:hover{
+    transform: scale(1.1);
+}
+.btn-green{
+    background-color: green;
+    color: white;
+}
+.btn-red{
+    background-color: red;
+    color: white;
+}
