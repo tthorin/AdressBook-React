@@ -3,8 +3,6 @@ import { useState } from "react";
 const ViewContact = ({ contact, viewing }) => {
   const [edited, setEdited] = useState(false);
   const [editItem, setEditItem] = useState("");
-  const [localFirst, setLocalFirst] = useState(contact.firstName);
-  const [localLast, setLocalLast] = useState(contact.lastName);
   const [localContact, setLocalContact] = useState(contact);
 
   const inputLostFocus = (value, local) => {
